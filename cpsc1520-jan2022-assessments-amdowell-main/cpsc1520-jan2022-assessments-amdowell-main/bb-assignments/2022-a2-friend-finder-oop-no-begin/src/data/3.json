@@ -1,0 +1,9 @@
+{
+    "id": 3,
+    "firstName": "Clark",
+    "lastName": "Kent",
+    "email": "clarkk@example.com",
+    "hometown": "Edmonton, AB",
+    "bio": "Clark grew up near the village of Werth, not too far from the capitol. He’s fairly educated and came from a good family, although he’s had a taste for getting himself in over his head as a child. His Uncle Norhan told him stories of adventures and such, which got him “curious” about seeking fame and fortune.",
+    "avatar": "./img/supes.jpg"
+}

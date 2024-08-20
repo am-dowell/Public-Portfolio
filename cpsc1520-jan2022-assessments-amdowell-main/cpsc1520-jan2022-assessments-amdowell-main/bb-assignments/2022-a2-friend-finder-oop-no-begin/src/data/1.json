@@ -1,0 +1,9 @@
+{
+    "id": 1,
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "janed@example.com",
+    "hometown": "Edmonton, AB",
+    "bio": "Jane is genetically engineered to be superior physically and intellectually, was a princess who fought in the Eugenics Wars, ruled a quarter of the earth, and ran off with her disciples to freeze in a cryogenic chamber for decades.",
+    "avatar": "./img/jane-doe.jpg"
+}

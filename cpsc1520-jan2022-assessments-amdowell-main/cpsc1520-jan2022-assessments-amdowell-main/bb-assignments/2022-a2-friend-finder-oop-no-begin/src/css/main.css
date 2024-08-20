@@ -1,0 +1,33 @@
+.friend>.bio {
+	clear: both;
+	padding-top: 1rem;
+}
+
+.friend>.identity {
+	display: flex;
+	margin-top: 1rem;
+}
+
+.friend>.identity>img  {
+	border-radius: 50%;
+	margin-right: 3rem;
+}
+
+.friend>.identity>ul {
+	list-style: none
+}
+
+.friend>.identity>div>ul>li {
+	font-size: 1.5rem;
+}
+
+/* CALL THESE FOR BOLDNESS */
+
+.friend>.identity>div>ul>li>.label {
+	font-weight: bold;
+}
+
+.friend>.identity>div>h2 {
+	font-weight: bold;
+	font-size: 3rem;
+}

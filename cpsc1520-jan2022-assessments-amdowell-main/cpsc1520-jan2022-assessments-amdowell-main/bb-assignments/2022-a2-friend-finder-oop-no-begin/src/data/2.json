@@ -1,0 +1,9 @@
+{
+    "id": 2,
+    "firstName": "Tom",
+    "lastName": "Jones",
+    "email": "tomj@example.com",
+    "hometown": "Edmonton, AB",
+    "bio": "Tom is just a small-town guy with a perfect family. He runs the local diner in the middle of Alberta. No big whoop. That is until we find out his real name is Joey Cusack and he's been in hiding for twenty some-odd years.What exactly did he do for his brother Richie in Philly, why did he try to rip Carl's eye out with a barbed knife, and why is he so good at killing people? Obviously he was in the mob, was extremely violent, and had quite a past to hide from.",
+    "avatar": "./img/tommy-gun.jpg"
+}

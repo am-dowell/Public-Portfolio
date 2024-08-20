@@ -1,0 +1,37 @@
+﻿@page "/AssessmentPages/GameList"
+<h1>View Games</h1>
+
+@if (Latest50Games == null)
+{
+    <p><strong>There are no scheduled games on file.</strong></p>
+}
+else
+{
+    @if (Latest50Games.Count == 0)
+    {
+        <p><strong>There are no scheduled games on file.</strong></p>
+    }
+    else
+    {
+        <h2>The last 50 scheduled games</h2>
+        <TableTemplate Items="Latest50Games" Context="GameItemView">
+            <TableHeader>
+
+                <th>ID</th>
+                <th>Date</th>
+                <th>Home</th>
+                <th>Visiting</th>
+                <th>Home Score</th>
+                <th>Visiting Score</th>
+            </TableHeader>
+            <RowTemplate>
+                <td>@GameItemView.GameID</td>
+                <td>@GameItemView.GameDate.ToShortDateString()</td>
+                <td>@GameItemView.HomeName (@GameItemView.HomeTeamID)</td>
+                <td>@GameItemView.VisitingName (@GameItemView.VisitingTeamID)</td>
+                <td>@GameItemView.HomeTeamScore</td>
+                <td>@GameItemView.VisitingTeamScore</td>
+            </RowTemplate>
+        </TableTemplate>
+    }
+}

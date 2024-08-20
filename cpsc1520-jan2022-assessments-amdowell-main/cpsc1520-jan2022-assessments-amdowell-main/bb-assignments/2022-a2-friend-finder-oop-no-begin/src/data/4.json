@@ -1,0 +1,9 @@
+{
+    "id": 4,
+    "firstName": "Sally",
+    "lastName": "Anne",
+    "email": "sallya@example.com",
+    "hometown": "Edmonton, AB",
+    "bio": "So Sally finds out, thanks to a shot of truth serum, that while she's been married to Harry for 17 years, he's actually been a spy for 18. Not only does he lead a secret life, but he's practically James Bond on steroids. What types of missions was he on, and how many times has he saved the country? He knows how to fly a Harrier, speaks a variety of languages, knows how to Tango, and is quite knowledgeable about nuclear warheads.",
+    "avatar": "./img/sally.jpg"
+}

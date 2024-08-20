@@ -1,0 +1,7 @@
+//To use this you must install the VSCode extension called "REST Client" by Huachao Mao.
+
+https://api.dictionaryapi.dev/api/v2/entries/en/hey
+
+//https://api.dictionaryapi.dev/api/v2/entries/en/love
+
+//https://api.dictionaryapi.dev/api/v2/entries/en/hate

@@ -1,0 +1,127 @@
+﻿@page "/AssessmentPages/GameScheduler"
+<h1>Game Scheduler</h1>
+
+<header>
+    @if (hasFeedBack)
+    {
+        <blockquote class="success">@feedBackMessage</blockquote>
+    }
+    @if (hasError)
+    {
+        <blockquote class="error">
+            @errorMessage
+            <ul>
+                @foreach (var detail in errorDetails)
+                {
+                    <li>@detail</li>
+                }
+            </ul>
+        </blockquote>
+    }
+</header>
+<body>
+    <div class="row">
+        <div class="column">
+            <label>
+                Enter game date (@DateTime.Today.ToShortDateString() or later)
+                <input type="date" asp-for="gameDate" @bind="gameDate" />
+            </label>
+            <br>
+            <label>
+                Select Home Team
+                <InputSelect @bind-Value="homeId" Style="Width: 140px; background-color: lightgray">
+                    <option value="0">select ...</option>
+                    @foreach (var item in homeTeamList)
+                    {
+                        <option value="@item.ValueId">@item.DisplayText</option>
+                    }
+                </InputSelect>
+            </label>
+            <br />
+            <label>
+                Select Visitor Team
+                <InputSelect @bind-Value="visitId" Style="Width: 140px; background-color: lightgray">
+                    <option value="0">select ...</option>
+                    @foreach (var item in visitTeamList)
+                    {
+                        <option value="@item.ValueId">@item.DisplayText</option>
+                    }
+                </InputSelect>
+            </label>
+            <br />
+            <button class="btn-success" @onclick="AddToSchedule">Add to schedule</button>
+            &nbsp;&nbsp;
+            <button class="btn-success" @onclick="Clear">Clear</button>
+
+        </div>
+        <div class="column">
+
+            <h3>Games to be Scheduled</h3>
+
+            @if (gameSchedule == null)
+            {
+                <p>No games have been scheduled for processing</p>
+            }
+            else
+            {
+                @if (gameSchedule.Count == 0)
+                {
+                    <p>No games have been scheduled for processing</p>
+                }
+                else
+                {
+                          @*
+                            YOUR CODE HERE
+
+                            Create a table to display the games to be scheduled
+                            a) Connect the table to gameSchedule
+                            b) set up a disable drop down list to display each team (Home and Visiting)
+                            c) set up a button, "Remove"", to be used to remove a row from a list.
+                           *@
+
+                    <TableTemplate Items="GameList" Context="GameScheduleView">
+                        <TableHeader>
+                            <th>Home</th>
+                            <th>Visiting</th>
+                        </TableHeader>
+                        <RowTemplate>
+                            <td>
+                                <button class="btn-danger"
+                                @onclick="(() => Remove(GameScheduleView.TeamID))">
+                                    Remove
+                                </button>
+                            </td>
+                            <td>
+                                <InputSelect @bind-Value="homeTeamList.TeamID"
+                                             Style="Width: 140px; background-color: lightgray">
+                                    <option value="0">select ...</option>
+                                    @foreach (var team in homeTeamList)
+                                    {
+                                        <option value="@team.ValueId">@team.HomeTeamName</option>
+                                    }
+                                </InputSelect>
+                            </td>
+                            <td>
+                                <label>VisitingTeam:</label>
+                                <InputSelect @bind-Value="visitTeamList.TeamID"
+                                             Style="Width: 140px; background-color: lightgray">
+                                    <option value="0">select ...</option>
+                                    @foreach (var team in visitTeamList)
+                                    {
+                                        <option value="@team.ValueId">@team.VisitTeamName</option>
+                                    }
+                                </InputSelect>
+                            </td>
+                        </RowTemplate>
+                    </TableTemplate>
+                    <br />
+                    <br />
+                    <button class="btn-success" @onclick="Save">
+                        Schedule
+                    </button>
+                }
+            }
+
+        </div>
+    </div>
+</body>
