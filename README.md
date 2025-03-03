@@ -4,7 +4,7 @@ With a strong background in full-stack software development, customer service, a
 My experience in HTML, CSS, JavaScript, and C# allows me to build dynamic and responsive web apps that enhance user engagement.
 
 What You'll Find Here:
-// Responsive Web Projects - Mobile-friendly designs optimized for all devices.
+- Responsive Web Projects - Mobile-friendly designs optimized for all devices.
 - UX/UI Focused Designs – Thoughtfully crafted layouts with intuitive navigation.
 - Interactive Components – Dynamic elements that improve user experience.
 - Code & Documentation – Clean, maintainable, and documented code.
